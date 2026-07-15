@@ -1,0 +1,43 @@
+.scroll-decoration-container {
+  position: fixed;
+  right: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5; /* Sit on top of section backgrounds but below modal overlays */
+  pointer-events: none; /* Allow clicking and selection through it */
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.scroll-decoration-text {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 800;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: rgba(255, 255, 255, 1); /* Solid white with low opacity */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .scroll-decoration-container {
+    right: 1rem;
+    width: 40px;
+  }
+  .scroll-decoration-text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-decoration-container {
+    display: none; /* Hide on mobile screens to preserve screen space */
+  }
+}

@@ -1,5 +1,6 @@
 import { Navbar } from './components/Navbar';
 import { CursorFollower } from './components/CursorFollower';
+import { ScrollDecoration } from './components/ScrollDecoration';
 import { Hero } from './sections/Hero';
 import { About } from './sections/About';
 import { Skills } from './sections/Skills';
@@ -14,6 +15,9 @@ function App() {
     <>
       {/* Custom Cursor follower */}
       <CursorFollower />
+
+      {/* Scrollbar vertical text decoration */}
+      <ScrollDecoration />
 
       {/* Navigation */}
       <Navbar />
