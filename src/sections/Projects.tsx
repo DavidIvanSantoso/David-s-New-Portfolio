@@ -40,7 +40,7 @@ export const Projects: React.FC = () => {
       category: 'web',
       description: 'A responsive administrative dashboard displaying real-time analytics data. Integrated with interactive charts and fluid drag-and-drop widget elements.',
       tags: ['React', 'TypeScript', 'Framer Motion', 'Chart.js', 'CSS Modules'],
-      image: projectCovidTest,
+      image: projectReUnion,
       demoUrl: 'https://example.com',
       githubUrl: 'https://github.com'
     },
@@ -49,7 +49,61 @@ export const Projects: React.FC = () => {
       category: 'ui',
       description: 'A UI design study focusing on typographic hierarchy, clean whitespace, and dark mode grid layout. Optimized for portfolio and creative agency layouts.',
       tags: ['Figma', 'UI/UX Design', 'Wireframing', 'Typography'],
-      image: projectCovidTest, // Reuse sass image with different contrast/filtering
+      image: projectTriples, // Reuse sass image with different contrast/filtering
+      demoUrl: 'https://example.com',
+      githubUrl: 'https://github.com'
+    },
+    {
+      title: 'Zen Design Portfolio Wireframe',
+      category: 'ui',
+      description: 'A UI design study focusing on typographic hierarchy, clean whitespace, and dark mode grid layout. Optimized for portfolio and creative agency layouts.',
+      tags: ['Figma', 'UI/UX Design', 'Wireframing', 'Typography'],
+      image: projectIot, // Reuse sass image with different contrast/filtering
+      demoUrl: 'https://example.com',
+      githubUrl: 'https://github.com'
+    },
+    {
+      title: 'Zen Design Portfolio Wireframe',
+      category: 'ui',
+      description: 'A UI design study focusing on typographic hierarchy, clean whitespace, and dark mode grid layout. Optimized for portfolio and creative agency layouts.',
+      tags: ['Figma', 'UI/UX Design', 'Wireframing', 'Typography'],
+      image: projectTriples, // Reuse sass image with different contrast/filtering
+      demoUrl: 'https://example.com',
+      githubUrl: 'https://github.com'
+    },
+    {
+      title: 'Zen Design Portfolio Wireframe',
+      category: 'ui',
+      description: 'A UI design study focusing on typographic hierarchy, clean whitespace, and dark mode grid layout. Optimized for portfolio and creative agency layouts.',
+      tags: ['Figma', 'UI/UX Design', 'Wireframing', 'Typography'],
+      image: projectFriendsBakery, // Reuse sass image with different contrast/filtering
+      demoUrl: 'https://example.com',
+      githubUrl: 'https://github.com'
+    },
+    {
+      title: 'Zen Design Portfolio Wireframe',
+      category: 'ui',
+      description: 'A UI design study focusing on typographic hierarchy, clean whitespace, and dark mode grid layout. Optimized for portfolio and creative agency layouts.',
+      tags: ['Figma', 'UI/UX Design', 'Wireframing', 'Typography'],
+      image: projectCrypto, // Reuse sass image with different contrast/filtering
+      demoUrl: 'https://example.com',
+      githubUrl: 'https://github.com'
+    },
+    {
+      title: 'Zen Design Portfolio Wireframe',
+      category: 'ui',
+      description: 'A UI design study focusing on typographic hierarchy, clean whitespace, and dark mode grid layout. Optimized for portfolio and creative agency layouts.',
+      tags: ['Figma', 'UI/UX Design', 'Wireframing', 'Typography'],
+      image: projectGameUI, // Reuse sass image with different contrast/filtering
+      demoUrl: 'https://example.com',
+      githubUrl: 'https://github.com'
+    },
+    {
+      title: 'Zen Design Portfolio Wireframe',
+      category: 'ui',
+      description: 'A UI design study focusing on typographic hierarchy, clean whitespace, and dark mode grid layout. Optimized for portfolio and creative agency layouts.',
+      tags: ['Figma', 'UI/UX Design', 'Wireframing', 'Typography'],
+      image: projectMachineLearning, // Reuse sass image with different contrast/filtering
       demoUrl: 'https://example.com',
       githubUrl: 'https://github.com'
     }
