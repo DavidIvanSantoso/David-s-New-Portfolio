@@ -7,42 +7,59 @@ interface Job {
   company: string;
   duration: string;
   description: string[];
+  skills?: string[];
 }
 
 export const Experience: React.FC = () => {
   const experiences: Job[] = [
     {
-      role: 'Senior Software Engineer',
-      company: 'Nexus Tech Solutions',
-      duration: '2024 - Present',
+      role: 'Fullstack Developer',
+      company: 'Asiades',
+      duration: 'November 2025 - Current',
       description: [
-        'Lead frontend development of highly-interactive web portals using React, Next.js, and TypeScript.',
-        'Collaborate closely with UI/UX designers to implement premium layouts, animations, and micro-interactions.',
-        'Improved application load times by 40% through code splitting, image optimization, and server-side caching.',
-        'Mentored junior engineers and conducted code reviews to maintain code quality standards.'
+        'Created a new website platform for Asiades B2B customer orders (asiades.pro).',
+        'Created REST APIs for asiades.pro to support mobile application developments on both Google Play Store and Apple App Store.',
+        'Developed a new website platform for Rey7 B2B customer orders.',
+        'Designed modern UI/UX layouts for both B2B customer platforms.'
+      ],
+      skills: ['Laravel', 'MySQL', 'PHP', 'UI/UX']
+    },
+    {
+      role: 'Fullstack Developer Freelance',
+      company: "Friend's Bakery (PT Pangan Mekar Jaya)",
+      duration: 'January 2025 - February 2025',
+      description: [
+        'Built a custom web portal using ReactJS for the HR department to record employee performance and manage training schedules.',
+        'Developed REST APIs using NodeJS for database operations and manipulation.',
+        'Created a mobile application using React Native for employees to view training schedules and track performance metrics.',
+        'Designed the UI/UX blueprints and interactive prototypes for both the web and mobile products.',
+        'Configured cloud infrastructure on DigitalOcean to deploy the web application, mobile app backend, and PostgreSQL database.'
+      ],
+      skills: ['React', 'React Native', 'ExpressJS', 'Android', 'PostgreSQL', 'Javascript', 'UI/UX Design']
+    },
+    {
+      role: 'Bachelor of Computer Science',
+      company: 'Petra Christian University',
+      duration: 'Graduated January 2024',
+      description: [
+        'Graduated with Cum Laude honors, achieving an overall GPA of 3.73 / 4.00.',
+        'Focused on Software Engineering, Database Systems, and Mobile Architectures.'
       ]
     },
     {
-      role: 'Software Engineer',
-      company: 'Prism Logic systems',
-      duration: '2022 - 2024',
+      role: 'Software Developer Internship',
+      company: 'PT Japfa Comfeed Tbk.',
+      duration: 'July 2022 - December 2022',
       description: [
-        'Built scalable Single Page Applications (SPAs) with React and Redux Toolkit.',
-        'Developed reusable UI component libraries using vanilla CSS and CSS Modules.',
-        'Engineered responsive web applications ensuring accessibility standards (WCAG) and cross-browser support.',
-        'Connected systems with REST and GraphQL endpoints, boosting data synchronization performance.'
-      ]
-    },
-    {
-      role: 'Frontend Developer',
-      company: 'ByteForge Studio',
-      duration: '2020 - 2022',
-      description: [
-        'Designed pixel-perfect portfolios and e-commerce websites from Figma mockups.',
-        'Configured Vite and Webpack environments to streamline fast local developer workflows.',
-        'Integrated interactive scroll-linked animations and page transitions using Framer Motion.',
-        'Collaborated on git-based workflows and handled automated deployments via Vercel and Netlify.'
-      ]
+        'Contributed to the Japfa Loyalty application solving core organizational problems for BestMeat consumers and the Japfa IT Sidoarjo team.',
+        'Created UI/UX layouts for the loyalty project (mobile app and admin panel website).',
+        'Participated in modeling the relational database structure for the loyalty project.',
+        'Built frontend systems for both the Mobile Application and the web-based Administrator Panel.',
+        'Served as the Intern Frontend Team Leader, delegating tasks and reviewing code quality.',
+        'Associated frontend systems with backend services.',
+        'Successfully completed 90% of the Admin Panel website and 70% of the mobile application prior to finalization by the Japfa IT Team and Google Play Store deployment.'
+      ],
+      skills: ['Javascript', 'VueJS', 'PostgreSQL', 'UI/UX Design', 'ExpressJS', 'Ionic']
     }
   ];
 
@@ -89,6 +106,16 @@ export const Experience: React.FC = () => {
                   <li key={bulletIdx}>{bullet}</li>
                 ))}
               </ul>
+              
+              {job.skills && (
+                <div className="experience-skills">
+                  {job.skills.map((skill) => (
+                    <span key={skill} className="experience-skill-tag">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

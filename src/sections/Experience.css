@@ -1,7 +1,7 @@
 .experience-timeline {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 3.5rem;
   max-width: 900px;
   margin: 0 auto;
   position: relative;
@@ -90,6 +90,30 @@
   position: absolute;
   left: 0;
   color: var(--text-muted);
+}
+
+/* Experience skill tags */
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.experience-skill-tag {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border-color);
+  text-transform: uppercase;
+  transition: var(--transition-fast);
+}
+
+.experience-item:hover .experience-skill-tag {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
 }
 
 @media (max-width: 768px) {
