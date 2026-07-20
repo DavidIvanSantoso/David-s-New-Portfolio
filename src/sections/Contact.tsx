@@ -61,27 +61,27 @@ export const Contact: React.FC = () => {
             <div className="contact-details">
               <div className="contact-detail-item">
                 <span className="contact-label">Email</span>
-                <a href="mailto:david.ivan@example.com" className="contact-value">
-                  david.ivan@example.com
+                <a href="mailto:davidivan6900@gmail.com" className="contact-value">
+                  davidivan6900@gmail.com
                 </a>
               </div>
               <div className="contact-detail-item">
                 <span className="contact-label">Location</span>
                 <span className="contact-value" style={{ cursor: 'default' }}>
-                  Jakarta, Indonesia
+                  Surabaya, Indonesia
                 </span>
               </div>
             </div>
 
             <div className="contact-socials">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://github.com/DavidIvanSantoso" target="_blank" rel="noopener noreferrer" className="social-link">
                 // GITHUB
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/in/davidivan6900/" target="_blank" rel="noopener noreferrer" className="social-link">
                 // LINKEDIN
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                // TWITTER
+              <a href="https://www.instagram.com/_davidivan/" target="_blank" rel="noopener noreferrer" className="social-link">
+                // INSTAGRAM
               </a>
             </div>
           </motion.div>

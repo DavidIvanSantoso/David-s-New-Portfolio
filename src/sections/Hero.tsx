@@ -37,18 +37,19 @@ export const Hero: React.FC = () => {
           animate="visible"
         >
           <motion.span className="hero-subtitle" variants={itemVariants}>
-            // SOFTWARE ENGINEER & FRONTEND ARCHITECT
+            // FULLSTACK DEVELOPER // SPORTS ENTHUSIAST // 
           </motion.span>
           
           <motion.h1 className="hero-title" variants={itemVariants}>
             <span>David Ivan.</span>
-            <span className="text-outline">Crafting Modern</span>
-            <span>Interfaces.</span>
+            <span className="text-outline">Fullstack Developer</span>
           </motion.h1>
 
           <motion.p className="hero-description" variants={itemVariants}>
-            A developer passionate about creating minimalist, high-performance web applications. Combining clean, structured code with refined layout aesthetics to deliver top-tier user experiences.
+          2 Years of Experience in Web & Mobile Development.
+          Building modern, scalable, and minimalist digital products. 
           </motion.p>
+          
 
           <motion.div className="hero-ctas" variants={itemVariants}>
             <a href="#projects" className="btn btn-primary">

@@ -2,12 +2,19 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import './Projects.css';
-import projectEcom from '../assets/project_ecom.jpg';
-import projectSaas from '../assets/project_saas.jpg';
+
+import projectCovidTest from '../assets/project-covidtest.png';
+import projectReUnion from '../assets/project-reUnion.jpeg';
+import projectTriples from '../assets/project-triples.png';
+import projectIot from '../assets/project-iot.png';
+import projectFriendsBakery from '../assets/project-friendsbakery.jpeg';
+import projectCrypto from '../assets/project-crypto.png';
+import projectGameUI from '../assets/project-gameui.png';
+import projectMachineLearning from '../assets/project-machinelearning.png';
 
 interface Project {
   title: string;
-  category: 'web' | 'ui';
+  category: 'web' | 'ui' | 'mobile-app';
   description: string;
   tags: string[];
   image: string;
@@ -16,7 +23,7 @@ interface Project {
 }
 
 export const Projects: React.FC = () => {
-  const [filter, setFilter] = useState<'all' | 'web' | 'ui'>('all');
+  const [filter, setFilter] = useState<'all' | 'web' | 'ui' | 'mobile-app'>('all');
 
   const projects: Project[] = [
     {
@@ -24,7 +31,7 @@ export const Projects: React.FC = () => {
       category: 'web',
       description: 'A modern, lightning-fast e-commerce shopping platform utilizing React, Vite, and Stripe checkout API. Crafted with high performance and smooth animation in mind.',
       tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Stripe'],
-      image: projectEcom,
+      image: projectCovidTest,
       demoUrl: 'https://example.com',
       githubUrl: 'https://github.com'
     },
@@ -33,7 +40,7 @@ export const Projects: React.FC = () => {
       category: 'web',
       description: 'A responsive administrative dashboard displaying real-time analytics data. Integrated with interactive charts and fluid drag-and-drop widget elements.',
       tags: ['React', 'TypeScript', 'Framer Motion', 'Chart.js', 'CSS Modules'],
-      image: projectSaas,
+      image: projectCovidTest,
       demoUrl: 'https://example.com',
       githubUrl: 'https://github.com'
     },
@@ -42,7 +49,7 @@ export const Projects: React.FC = () => {
       category: 'ui',
       description: 'A UI design study focusing on typographic hierarchy, clean whitespace, and dark mode grid layout. Optimized for portfolio and creative agency layouts.',
       tags: ['Figma', 'UI/UX Design', 'Wireframing', 'Typography'],
-      image: projectSaas, // Reuse sass image with different contrast/filtering
+      image: projectCovidTest, // Reuse sass image with different contrast/filtering
       demoUrl: 'https://example.com',
       githubUrl: 'https://github.com'
     }

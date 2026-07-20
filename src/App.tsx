@@ -50,9 +50,6 @@ function App() {
           gap: '1rem'
         }}>
           <span>© {currentYear} DAVID IVAN. ALL RIGHTS RESERVED.</span>
-          <span style={{ color: 'var(--text-muted)' }}>
-            MINIMALIST DESIGN // POWERED BY REACT & VITE
-          </span>
         </div>
       </footer>
     </>

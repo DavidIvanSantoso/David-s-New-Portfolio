@@ -3,6 +3,7 @@
   gap: 2rem;
   margin-bottom: 3.5rem;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .filter-btn {
@@ -35,8 +36,21 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .project-card {
@@ -50,6 +64,7 @@
 
 .project-card:hover {
   border-color: var(--text-primary);
+  transform: translateY(-4px);
 }
 
 .project-img-wrapper {
@@ -58,23 +73,48 @@
   aspect-ratio: 16/9;
   overflow: hidden;
   border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.project-img {
+/* Blueprint/Geometric background styling for project headers */
+.blueprint-bg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: grayscale(1) brightness(0.8);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0b0b;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 15px 15px;
+  background-position: center;
+  transition: var(--transition-smooth);
+  color: var(--text-muted);
+}
+
+.project-card:hover .blueprint-bg {
+  color: var(--text-primary);
+  background-color: #101010;
+}
+
+.blueprint-icon {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
   transition: var(--transition-smooth);
 }
 
-.project-card:hover .project-img {
-  filter: grayscale(0) brightness(1);
-  transform: scale(1.03);
+.project-card:hover .blueprint-icon {
+  transform: scale(1.1);
 }
 
 .project-info {
-  padding: 2.25rem;
+  padding: 1.75rem;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -83,14 +123,14 @@
 
 .project-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: var(--text-primary);
 }
 
 .project-desc {
-  font-size: 1rem;
+  font-size: 0.925rem;
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -100,42 +140,36 @@
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-tag {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   background-color: var(--bg-tertiary);
   color: var(--text-secondary);
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   border: 1px solid var(--border-color);
+  text-transform: uppercase;
 }
 
 .project-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: center;
 }
 
 .project-link-icon {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
   transition: var(--transition-fast);
 }
 
 .project-link-icon:hover {
   color: var(--text-primary);
-}
-
-@media (max-width: 992px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
 }

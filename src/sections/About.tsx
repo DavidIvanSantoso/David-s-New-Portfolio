@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './About.css';
-import profilePortrait from '../assets/profile_portrait.jpg';
+import profilePortrait from '../assets/profile-david.png';
 
 export const About: React.FC = () => {
   const textVariants = {
@@ -39,13 +39,13 @@ export const About: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
           >
             <p>
-              Hi, I'm David Ivan, a software engineer with a deep passion for designing and building highly responsive, intuitive, and clean digital experiences. I believe that good engineering is invisible—characterized by seamless performance, clean structure, and functional minimalism.
+              Hi, I'm David Ivan, a fullstack with a passion for solving real world problems through digitalization.
             </p>
             <p>
-              Over the years, I've honed my skills in frontend development, crafting scalable architecture using modern frameworks like React and Vite, typed with TypeScript, and styled with pixel-perfect control. I specialize in building custom, fluid animations that increase user retention and satisfaction.
+              Trough my experiences, I've upgrade my skills in fullstack development, making websites and mobile applications using modern frameworks like React and Flutter.
             </p>
             <p>
-              When I'm not coding or refining interfaces, I'm researching software design patterns, checking out open-source projects, and seeking ways to push the boundaries of modern web technologies.
+              When I'm not coding, I always love to play sports such as tennis, badminton, and basketball. Hit me up on social medias to play together.
             </p>
           </motion.div>
 
