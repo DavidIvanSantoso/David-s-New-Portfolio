@@ -1,0 +1,16 @@
+.pixel-snow-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1; /* Sits behind text content but above background */
+  opacity: 0.85;
+}
+
+@media (pointer: coarse) {
+  .pixel-snow-canvas {
+    opacity: 0.5; /* Lighter on touch devices */
+  }
+}

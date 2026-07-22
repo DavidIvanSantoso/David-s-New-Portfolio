@@ -1,0 +1,83 @@
+.pixel-section-divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 1rem 0;
+  user-select: none;
+}
+
+.pixel-divider-line {
+  flex: 1;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--border-hover) 0,
+    var(--border-hover) 4px,
+    transparent 4px,
+    transparent 10px
+  );
+  opacity: 0.7;
+}
+
+.pixel-divider-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1.25rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-hover);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.pixel-divider-badge:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+.pixel-badge-corner {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: var(--text-primary);
+}
+
+.pixel-badge-corner.top-left {
+  top: -2px;
+  left: -2px;
+}
+
+.pixel-badge-corner.top-right {
+  top: -2px;
+  right: -2px;
+}
+
+.pixel-badge-corner.bottom-left {
+  bottom: -2px;
+  left: -2px;
+}
+
+.pixel-badge-corner.bottom-right {
+  bottom: -2px;
+  right: -2px;
+}
+
+.pixel-badge-dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-secondary);
+  display: inline-block;
+}
+
+.pixel-divider-badge:hover .pixel-badge-dot {
+  background-color: var(--text-primary);
+}

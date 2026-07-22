@@ -1,5 +1,7 @@
 import { Navbar } from './components/Navbar';
 import { CursorFollower } from './components/CursorFollower';
+import { PixelSnow } from './components/PixelSnow';
+import { PixelSectionDivider } from './components/PixelSectionDivider';
 import { ScrollDecoration } from './components/ScrollDecoration';
 import { Hero } from './sections/Hero';
 import { About } from './sections/About';
@@ -16,6 +18,9 @@ function App() {
       {/* Custom Cursor follower */}
       <CursorFollower />
 
+      {/* Ambient Pixel Snow particles layer */}
+      <PixelSnow />
+
       {/* Scrollbar vertical text decoration */}
       <ScrollDecoration />
 
@@ -25,10 +30,15 @@ function App() {
       {/* Main Sections */}
       <main>
         <Hero />
+        <PixelSectionDivider label="01 // ABOUT" />
         <About />
+        <PixelSectionDivider label="02 // SKILLS" />
         <Skills />
+        <PixelSectionDivider label="03 // EXPERIENCE" />
         <Experience />
+        <PixelSectionDivider label="04 // PROJECTS" />
         <Projects />
+        <PixelSectionDivider label="05 // CONTACT" />
         <Contact />
       </main>
 
