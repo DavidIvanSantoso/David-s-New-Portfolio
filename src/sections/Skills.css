@@ -75,14 +75,17 @@
 .logo-icon {
   width: 44px;
   height: 44px;
-  color: var(--text-secondary);
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.1) brightness(0.9);
+  opacity: 0.8;
   transition: var(--transition-smooth);
   margin-bottom: 0.75rem;
 }
 
 .logo-item:hover .logo-icon {
-  color: var(--text-primary);
-  transform: scale(1.08);
+  filter: grayscale(0) contrast(1) brightness(1);
+  opacity: 1;
+  transform: scale(1.12);
 }
 
 .logo-name {

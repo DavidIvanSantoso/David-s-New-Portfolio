@@ -48,7 +48,7 @@ export const Projects: React.FC = () => {
       description: 'iOS Development class project. Displays live cryptocurrency data, market caps, and price trends integrated with the CoinGecko REST API.',
       tags: ['Swift', 'Xcode'],
       image: projectCrypto,
-      githubUrl: 'https://github.com'
+      githubUrl: 'https://github.com/DavidIvanSantoso/CoinMarket'
     },
     {
       title: 'TripleS Wikipedia',
@@ -72,7 +72,7 @@ export const Projects: React.FC = () => {
       description: 'UI/UX class final project. Collaborative high-fidelity website interface design for modern online tactical shooter games similar to Valorant and CS2.',
       tags: ['UI/UX', 'Figma'],
       image: projectGameUI,
-      demoUrl: 'https://figma.com'
+      demoUrl: 'https://www.figma.com/proto/nJjgKOiTwkTLfbIwTjzK4v/Projek?node-id=1-15&starting-point-node-id=1%3A15&t=JwtkiYkMcVaMjMjN-1'
     },
     {
       title: 'Shape Recognition ML',
@@ -80,7 +80,7 @@ export const Projects: React.FC = () => {
       description: 'Machine Learning class project. Trains a computer vision model to analyze uploaded images and classify their primary geometric shapes.',
       tags: ['Machine Learning', 'Python'],
       image: projectMachineLearning,
-      githubUrl: 'https://github.com'
+      githubUrl: 'https://github.com/AlfredWibowo/Shape_Recognition_CNN'
     },
     {
       title: "Friend's Bakery HR System",
@@ -88,7 +88,7 @@ export const Projects: React.FC = () => {
       description: 'Freelance HR management platform for Friend’s Bakery comprising a React web portal for training schedules and a React Native mobile app for employee tracking.',
       tags: ['React', 'React Native', 'ExpressJS', 'Figma', 'PostgreSQL'],
       image: projectFriendsBakery,
-      githubUrl: 'https://github.com'
+      githubUrl: 'https://play.google.com/store/apps/details?id=com.davidivan.FriendsBakeCrew&pcampaignid=web_share'
     }
   ];
 
