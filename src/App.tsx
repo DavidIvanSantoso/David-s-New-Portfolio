@@ -1,5 +1,6 @@
 import { Navbar } from './components/Navbar';
 import { CursorFollower } from './components/CursorFollower';
+import { ClickBurst } from './components/ClickBurst';
 import { PixelSnow } from './components/PixelSnow';
 import { PixelSectionDivider } from './components/PixelSectionDivider';
 import { ScrollDecoration } from './components/ScrollDecoration';
@@ -17,6 +18,9 @@ function App() {
     <>
       {/* Custom Cursor follower */}
       <CursorFollower />
+
+      {/* Physics-based pixel burst on click */}
+      <ClickBurst />
 
       {/* Ambient Pixel Snow particles layer */}
       <PixelSnow />

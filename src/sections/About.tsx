@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ScrambleTitle } from '../components/ScrambleTitle';
 import './About.css';
 import profilePortrait from '../assets/profile-david.png';
 
@@ -27,7 +28,7 @@ export const About: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-num">01 // BIOGRAPHY</span>
-          <h2 className="section-title">About Me</h2>
+          <ScrambleTitle className="section-title">About Me</ScrambleTitle>
         </div>
         
         <div className="about-grid">

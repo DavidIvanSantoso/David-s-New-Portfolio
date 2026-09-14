@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { ScrambleTitle } from '../components/ScrambleTitle';
 import './Contact.css';
 
 export const Contact: React.FC = () => {
@@ -39,7 +40,7 @@ export const Contact: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-num">05 // REACH OUT</span>
-          <h2 className="section-title">Get In Touch</h2>
+          <ScrambleTitle className="section-title">Get In Touch</ScrambleTitle>
         </div>
 
         <div className="contact-grid">

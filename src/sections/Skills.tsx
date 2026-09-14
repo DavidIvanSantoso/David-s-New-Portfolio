@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { MagneticButton } from '../components/MagneticButton';
+import { ScrambleTitle } from '../components/ScrambleTitle';
 import './Skills.css';
 
 import reactIcon from '../assets/tech/react.svg';
@@ -91,7 +93,7 @@ export const Skills: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-num">02 // COMPETENCIES</span>
-          <h2 className="section-title">Skills & Tech Stack</h2>
+          <ScrambleTitle className="section-title">Skills & Tech Stack</ScrambleTitle>
         </div>
 
         <div className="skills-grid">
@@ -108,10 +110,10 @@ export const Skills: React.FC = () => {
               <h3 className="category-title">{category.title}</h3>
               <div className="skills-logos-grid">
                 {category.techs.map((tech) => (
-                  <div key={tech.name} className="logo-item">
+                  <MagneticButton key={tech.name} className="logo-item" strength={0.5}>
                     <img src={tech.icon} alt={`${tech.name} logo`} className="logo-icon" />
                     <span className="logo-name">{tech.name}</span>
-                  </div>
+                  </MagneticButton>
                 ))}
               </div>
             </motion.div>

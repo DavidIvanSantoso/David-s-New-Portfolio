@@ -62,14 +62,15 @@
   padding: 1.25rem 0.5rem;
   border: 1px solid transparent;
   background-color: var(--bg-primary);
-  transition: var(--transition-smooth);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
   text-align: center;
+  will-change: transform;
+  cursor: pointer;
 }
 
 .logo-item:hover {
   border-color: var(--border-color);
   background-color: var(--bg-secondary);
-  transform: translateY(-4px);
 }
 
 .logo-icon {

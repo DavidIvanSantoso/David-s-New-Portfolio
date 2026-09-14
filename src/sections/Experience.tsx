@@ -1,6 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ScrambleTitle } from '../components/ScrambleTitle';
+import { CursorImagePreview } from '../components/CursorImagePreview';
+import { useCursorImagePreview } from '../hooks/useCursorImagePreview';
 import './Experience.css';
+
+import asiadesImg from '../assets/asiades-pro.png';
+import friendsBakeryImg from '../assets/project-friendsbakery.jpeg';
+import graduateImg from '../assets/graduate-img.jpeg';
+import japfaInternshipImg from '../assets/japfa-internship.png';
 
 interface Job {
   role: string;
@@ -8,9 +16,13 @@ interface Job {
   duration: string;
   description: string[];
   skills?: string[];
+  image: string;
 }
 
 export const Experience: React.FC = () => {
+  const { previewRef, previewImgRef, handlePreviewEnter, handlePreviewMove, handlePreviewLeave } =
+    useCursorImagePreview();
+
   const experiences: Job[] = [
     {
       role: 'Fullstack Developer',
@@ -22,7 +34,8 @@ export const Experience: React.FC = () => {
         'Developed a new website platform for Rey7 B2B customer orders.',
         'Designed modern UI/UX layouts for both B2B customer platforms.'
       ],
-      skills: ['Laravel', 'MySQL', 'PHP', 'UI/UX']
+      skills: ['Laravel', 'MySQL', 'PHP', 'UI/UX'],
+      image: asiadesImg
     },
     {
       role: 'Fullstack Developer Freelance',
@@ -35,7 +48,8 @@ export const Experience: React.FC = () => {
         'Designed the UI/UX blueprints and interactive prototypes for both the web and mobile products.',
         'Configured cloud infrastructure on DigitalOcean to deploy the web application, mobile app backend, and PostgreSQL database.'
       ],
-      skills: ['React', 'React Native', 'ExpressJS', 'Android', 'PostgreSQL', 'Javascript', 'UI/UX Design']
+      skills: ['React', 'React Native', 'ExpressJS', 'Android', 'PostgreSQL', 'Javascript', 'UI/UX Design'],
+      image: friendsBakeryImg
     },
     {
       role: 'Bachelor of Computer Science',
@@ -44,7 +58,8 @@ export const Experience: React.FC = () => {
       description: [
         'Graduated with Cum Laude honors, achieving an overall GPA of 3.73 / 4.00.',
         'Focused on Software Engineering, Database Systems, and Mobile Architectures.'
-      ]
+      ],
+      image: graduateImg
     },
     {
       role: 'Software Developer Internship',
@@ -59,7 +74,8 @@ export const Experience: React.FC = () => {
         'Associated frontend systems with backend services.',
         'Successfully completed 90% of the Admin Panel website and 70% of the mobile application prior to finalization by the Japfa IT Team and Google Play Store deployment.'
       ],
-      skills: ['Javascript', 'VueJS', 'PostgreSQL', 'UI/UX Design', 'ExpressJS', 'Ionic']
+      skills: ['Javascript', 'VueJS', 'PostgreSQL', 'UI/UX Design', 'ExpressJS', 'Ionic'],
+      image: japfaInternshipImg
     }
   ];
 
@@ -80,7 +96,7 @@ export const Experience: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-num">03 // CHRONOLOGY</span>
-          <h2 className="section-title">Work Experience</h2>
+          <ScrambleTitle className="section-title">Work Experience</ScrambleTitle>
         </div>
 
         <div className="experience-timeline">
@@ -93,6 +109,9 @@ export const Experience: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1 }}
+              onMouseEnter={handlePreviewEnter(job.image)}
+              onMouseMove={handlePreviewMove}
+              onMouseLeave={handlePreviewLeave}
             >
               <div className="experience-header">
                 <div>
@@ -120,6 +139,8 @@ export const Experience: React.FC = () => {
           ))}
         </div>
       </div>
+
+      <CursorImagePreview previewRef={previewRef} previewImgRef={previewImgRef} />
     </section>
   );
 };

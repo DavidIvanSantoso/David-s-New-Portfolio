@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
+import { ScrambleTitle } from '../components/ScrambleTitle';
+import { CursorImagePreview } from '../components/CursorImagePreview';
+import { useCursorImagePreview } from '../hooks/useCursorImagePreview';
 import './Projects.css';
 
 import projectCovidTest from '../assets/project-covidtest.png';
@@ -24,6 +27,9 @@ export interface Project {
 
 export const Projects: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'web' | 'mobile' | 'ui'>('all');
+
+  const { previewRef, previewImgRef, handlePreviewEnter, handlePreviewMove, handlePreviewLeave } =
+    useCursorImagePreview();
 
   const projects: Project[] = [
     {
@@ -101,7 +107,7 @@ export const Projects: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-num">04 // CREATIVE WORK</span>
-          <h2 className="section-title">Featured Projects</h2>
+          <ScrambleTitle className="section-title">Featured Projects</ScrambleTitle>
         </div>
 
         {/* Category Filters */}
@@ -144,15 +150,18 @@ export const Projects: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
+                onMouseEnter={handlePreviewEnter(project.image)}
+                onMouseMove={handlePreviewMove}
+                onMouseLeave={handlePreviewLeave}
               >
                 <div className="project-img-wrapper">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="project-img" 
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-img"
                   />
                 </div>
-                
+
                 <div className="project-info">
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-desc">{project.description}</p>
@@ -196,6 +205,8 @@ export const Projects: React.FC = () => {
           </AnimatePresence>
         </motion.div>
       </div>
+
+      <CursorImagePreview previewRef={previewRef} previewImgRef={previewImgRef} />
     </section>
   );
 };
