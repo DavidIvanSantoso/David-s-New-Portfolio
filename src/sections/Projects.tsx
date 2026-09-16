@@ -14,6 +14,7 @@ import projectFriendsBakery from '../assets/project-friendsbakery.jpeg';
 import projectCrypto from '../assets/project-crypto.png';
 import projectGameUI from '../assets/project-gameui.png';
 import projectMachineLearning from '../assets/project-machinelearning.png';
+import projectAdnFarm from '../assets/adn-farm.png';
 
 export interface Project {
   title: string;
@@ -32,6 +33,13 @@ export const Projects: React.FC = () => {
     useCursorImagePreview();
 
   const projects: Project[] = [
+    {
+      title: 'ADN Farm',
+      categories: ['web'],
+      description: 'Web Application for managing catfish farm operations family business.',
+      tags: ['Laravel', 'PostgreSQL', 'Digital Ocean'],
+      image: projectAdnFarm
+    },
     {
       title: 'IoT Platform',
       categories: ['web'],
