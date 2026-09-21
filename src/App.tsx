@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { Navbar } from './components/Navbar';
+import { DoorIntro } from './components/DoorIntro';
 import { CursorFollower } from './components/CursorFollower';
 import { ClickBurst } from './components/ClickBurst';
 import { PixelSnow } from './components/PixelSnow';
@@ -13,6 +15,7 @@ import { Contact } from './sections/Contact';
 
 function App() {
   const currentYear = new Date().getFullYear();
+  const [entered, setEntered] = useState(false);
 
   return (
     <>
@@ -22,6 +25,11 @@ function App() {
       {/* Physics-based pixel burst on click */}
       <ClickBurst />
 
+      {/* Door entrance gate */}
+      <DoorIntro onOpen={() => setEntered(true)} />
+
+      {entered && (
+      <>
       {/* Ambient Pixel Snow particles layer */}
       <PixelSnow />
 
@@ -66,6 +74,8 @@ function App() {
           <span>© {currentYear} DAVID IVAN. ALL RIGHTS RESERVED.</span>
         </div>
       </footer>
+      </>
+      )}
     </>
   );
 }

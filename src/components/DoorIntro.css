@@ -1,0 +1,102 @@
+.door-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  overflow: hidden;
+}
+
+.door-stage {
+  perspective: 1400px;
+}
+
+.door {
+  position: relative;
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: min(2.7vh, 4.4vw);
+  line-height: 1;
+  color: var(--text-secondary);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.door:disabled {
+  color: var(--text-secondary);
+}
+
+.door-half {
+  white-space: pre;
+  text-align: left;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 1;
+}
+
+.door-half-left {
+  transform-origin: left center;
+}
+
+.door-half-right {
+  transform-origin: right center;
+}
+
+.door-row {
+  display: flex;
+  height: 1em;
+}
+
+.dash,
+.door-gap {
+  display: inline-block;
+  width: 0.6em;
+  text-align: center;
+}
+
+.door:not(:disabled):hover .dash {
+  color: var(--text-primary);
+}
+
+.door-knob {
+  color: var(--text-primary);
+  text-shadow: 0 0 6px var(--text-primary);
+}
+
+.door-glow {
+  position: absolute;
+  top: 2em;
+  bottom: 1em;
+  left: 2.4em;
+  right: 2.4em;
+  background: radial-gradient(circle, #ffffff 0%, #d8d8d8 60%, #9a9a9a 100%);
+  transform: translateZ(-4px);
+}
+
+.door-hint {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.door-hint-ready {
+  color: var(--text-primary);
+  animation: door-hint-blink 1.2s steps(2, jump-none) infinite;
+}
+
+@keyframes door-hint-blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
