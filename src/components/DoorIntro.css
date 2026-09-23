@@ -12,7 +12,21 @@
 }
 
 .door-stage {
+  position: relative;
+  z-index: 1;
   perspective: 1400px;
+}
+
+.door-facade {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5em;
+  font-family: var(--font-mono);
+  font-size: min(2.7vh, 3vw);
+  line-height: 1;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
 }
 
 .door {
@@ -21,9 +35,7 @@
   background: none;
   border: none;
   padding: 0;
-  font-family: var(--font-mono);
-  font-size: min(2.7vh, 4.4vw);
-  line-height: 1;
+  font: inherit;
   color: var(--text-secondary);
   transform-style: preserve-3d;
   will-change: transform;
@@ -78,6 +90,63 @@
   right: 2.4em;
   background: radial-gradient(circle, #ffffff 0%, #d8d8d8 60%, #9a9a9a 100%);
   transform: translateZ(-4px);
+}
+
+.door-window {
+  position: relative;
+  margin-top: 3em;
+  color: var(--text-muted);
+  white-space: pre;
+  text-align: left;
+}
+
+.door-window-art {
+  position: relative;
+  z-index: 1;
+}
+
+.door-window-glow {
+  position: absolute;
+  top: 0.5em;
+  bottom: 1.5em;
+  left: 0.9em;
+  right: 0.9em;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.04) 60%, transparent 100%);
+}
+
+.door-ground {
+  position: absolute;
+  top: calc(100% + 0.6em);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: pre;
+  color: var(--text-muted);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 25%, #000 75%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 25%, #000 75%, transparent);
+}
+
+.door-dust {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.door-dust span {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  opacity: 0;
+}
+
+@media (max-width: 640px) {
+  .door-facade {
+    font-size: min(2.7vh, 4.4vw);
+  }
+
+  .door-window {
+    display: none;
+  }
 }
 
 .door-hint {
