@@ -22,6 +22,11 @@ import typescriptIcon from '../assets/tech/typescript.svg';
 import dartIcon from '../assets/tech/dart.svg';
 import kotlinIcon from '../assets/tech/kotlin.svg';
 import phpIcon from '../assets/tech/php.svg';
+import golangIcon from '../assets/tech/golang.svg';
+import photoshopIcon from '../assets/tech/photoshop.svg';
+import illustratorIcon from '../assets/tech/illustrator.svg';
+import figmaIcon from '../assets/tech/figma.svg';
+import canvaIcon from '../assets/tech/canva.svg';
 
 interface Tech {
   name: string;
@@ -71,6 +76,16 @@ export const Skills: React.FC = () => {
         { name: 'Dart', icon: dartIcon },
         { name: 'Kotlin', icon: kotlinIcon },
         { name: 'PHP', icon: phpIcon },
+        { name: 'Golang', icon: golangIcon },
+      ]
+    },
+    {
+      title: 'Tools',
+      techs: [
+        { name: 'Photoshop', icon: photoshopIcon },
+        { name: 'Illustrator', icon: illustratorIcon },
+        { name: 'Figma', icon: figmaIcon },
+        { name: 'Canva', icon: canvaIcon },
       ]
     }
   ];
